@@ -9,4 +9,5 @@ export const Container = styled.footer`
   width: max-content;
   margin-left: auto;
   margin-right: 1rem;
+  color: grey;
 `;

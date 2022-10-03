@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Left, Right } from "./styles";
 import Image from "next/image";
-import code from "../../assets/code-mask@2x.png";
-import mouse from "../../assets/mouse-alt.svg";
+import code from "../../assets/images/code-mask@2x.png";
+
 const Landing = () => {
   return (
     <Container>

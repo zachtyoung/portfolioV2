@@ -1,0 +1,16 @@
+{
+   "completed":[
+        {"project_name":"Georgia Pacific", "project_description":"lorem ispum lorem lorem lorem lorem lorem lorem ispum lorem ispum lorem ipsum", "project_image_path":"/images/GP.png"}
+    ]
+, 
+
+    "active": [
+        {"project_name":"Lorem", "project_description":"lorem ispum lorem lorem lorem lorem lorem lorem ispum lorem ispum lorem ipsum", "project_image_path":"../assets/images/code.png"}
+    ]
+,
+
+    "upcoming":   [
+        {"project_name":"Lorem", "project_description":"lorem ispum lorem lorem lorem lorem lorem lorem ispum lorem ispum lorem ipsum", "project_image_path":"../assets/images/code.png"}
+    ]
+
+}

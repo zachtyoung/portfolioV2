@@ -5,6 +5,7 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   padding-left: 13vw;
   align-items: center;
+  min-height: 100vh;
 `;
 export const Left = styled.div`
   max-width: 625px;
@@ -26,6 +27,8 @@ export const Left = styled.div`
     max-width: 564px;
   }
   button {
+    font-family: "Proxima Nova", sans-serif;
+    margin-top: 50px;
     padding: 1rem 2rem;
     border: none;
     background: transparent linear-gradient(243deg, #8e2de2 0%, #4a00e0 100%) 0%

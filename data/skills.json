@@ -1,0 +1,23 @@
+{
+    "frontend":[
+        {"abbreviation": "Js", "description":"Javascript"},
+        {"abbreviation": "Re", "description":"React"},
+        {"abbreviation": "Nx", "description":"Next"},
+        {"abbreviation": "Gb", "description":"Gatsby"},
+        {"abbreviation": "Gq", "description":"GraphQL"}
+    ],
+    "backend":[
+        {"abbreviation": "Nd", "description":"Node"},
+        {"abbreviation": "Ex", "description":"Express"},
+        {"abbreviation": "Aw", "description":"AWS"},
+        {"abbreviation": "Pg", "description":"Postgres"},
+        {"abbreviation": "Sq", "description":"SQL/SQLite"}
+    ],
+    "tooling":[
+        {"abbreviation": "Gt", "description":"Git"},
+        {"abbreviation": "Vs", "description":"VS Code"},
+        {"abbreviation": "Gl", "description":"GitLab"},
+        {"abbreviation": "Tw", "description":"Twilio"},
+        {"abbreviation": "Ng", "description":"Ngrok"}
+    ]
+}
