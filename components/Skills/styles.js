@@ -29,5 +29,10 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, max-content);
   margin-bottom: 30px;
-  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
 `;

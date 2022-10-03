@@ -6,6 +6,9 @@ export const Container = styled.div`
   padding-left: 13vw;
   align-items: center;
   min-height: 100vh;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 export const Left = styled.div`
   max-width: 625px;
@@ -42,11 +45,18 @@ export const Left = styled.div`
       transition: all 0.1s ease-in-out;
     }
   }
+  @media (max-width: 768px) {
+    margin-bottom: 100px;
+  }
 `;
 export const Right = styled.div`
   img {
     width: 100%;
     display: block;
     margin-right: -100px;
+  }
+  @media (max-width: 768px) {
+    grid-row: 1;
+    margin-bottom: 50px;
   }
 `;

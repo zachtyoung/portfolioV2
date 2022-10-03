@@ -42,6 +42,9 @@ export const Navigation = styled.ul`
       }
     }
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const CTA = styled.button`

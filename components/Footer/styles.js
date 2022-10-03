@@ -10,4 +10,6 @@ export const Container = styled.footer`
   margin-left: auto;
   margin-right: 1rem;
   color: grey;
+  margin-top: 50px;
+  font-size: 0.8rem;
 `;

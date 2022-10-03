@@ -17,6 +17,10 @@ export const Container = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, max-content);
     row-gap: 44px;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
     input {
       display: block;
       grid-column: 1;
@@ -39,9 +43,17 @@ export const Container = styled.div`
       font-weight: 600;
       font-size: 1rem;
       resize: none;
+      @media (max-width: 768px) {
+        grid-column: 1;
+        grid-row: 4;
+        min-height: 350px;
+      }
     }
     margin-top: 180px;
     margin-bottom: 180px;
+    @media (max-width: 768px) {
+      margin-bottom: 50px;
+    }
   }
   button {
     cursor: pointer;
