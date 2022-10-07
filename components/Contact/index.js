@@ -1,6 +1,8 @@
 import React from "react";
 import { Container } from "./styles";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 const Contact = () => {
+  const hcaptchaRef = React.useRef(null);
   const [formValues, setFormValues] = React.useState({
     name: "",
     email: "",
@@ -11,14 +13,48 @@ const Contact = () => {
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = (e) => {
-    setFormValues({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+    e.preventDefault();
+    // Execute the hCaptcha when the form is submitted
+    hcaptchaRef.current.execute();
   };
+
+  const onHCaptchaChange = async (captchaCode) => {
+    // If the hCaptcha code is null or undefined indicating that
+    // the hCaptcha was expired then return early
+    if (!captchaCode) {
+      return;
+    }
+    try {
+      const response = await fetch("/api/register", {
+        method: "POST",
+        body: JSON.stringify({ email, captcha: captchaCode }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (response.ok) {
+        // If the response is ok than show the success alert
+        alert("Email registered successfully");
+      } else {
+        // Else throw an error with the message returned
+        // from the API
+        const error = await response.json();
+        throw new Error(error.message);
+      }
+    } catch (error) {
+      alert(error?.message || "Something went wrong");
+    } finally {
+      setFormValues({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    }
+  };
+
   return (
     <Container>
       <h1>Get In Touch</h1>
@@ -51,7 +87,14 @@ const Contact = () => {
           value={formValues.message}
         />
       </form>
-      <button onClick={() => handleSubmit()}>Submit</button>
+      <HCaptcha
+        id="test"
+        size="invisible"
+        ref={hcaptchaRef}
+        sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY}
+        onVerify={onHCaptchaChange}
+      />
+      <button onClick={(e) => handleSubmit(e)}>Submit</button>
     </Container>
   );
 };
