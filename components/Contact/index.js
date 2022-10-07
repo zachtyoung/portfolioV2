@@ -29,7 +29,7 @@ const Contact = () => {
     try {
       const response = await fetch("/api/register", {
         method: "POST",
-        body: JSON.stringify({ email, captcha: captchaCode }),
+        body: JSON.stringify({ captcha: captchaCode }),
         headers: {
           "Content-Type": "application/json",
         },
