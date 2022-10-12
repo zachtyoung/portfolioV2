@@ -50,7 +50,7 @@ export const Container = styled.div`
       }
     }
     margin-top: 180px;
-    margin-bottom: 180px;
+    margin-bottom: 120px;
     @media (max-width: 768px) {
       margin-bottom: 50px;
     }

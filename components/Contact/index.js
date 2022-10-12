@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "./styles";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import axios from "axios";
 const Contact = () => {
   const hcaptchaRef = React.useRef(null);
   const [formValues, setFormValues] = React.useState({
@@ -36,7 +37,13 @@ const Contact = () => {
       });
       if (response.ok) {
         // If the response is ok than show the success alert
-        alert("Email registered successfully");
+        console.log(response);
+        axios
+          .post(
+            "https://89o9l9ouee.execute-api.us-east-2.amazonaws.com/default/portfolioContactFormSubmit",
+            formValues
+          )
+          .then((res) => console.log(res));
       } else {
         // Else throw an error with the message returned
         // from the API
