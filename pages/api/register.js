@@ -47,6 +47,7 @@ export default async function handler(req, res) {
         // to your backend
         await sleep();
         // Return 200 if everything is successful
+
         return res.status(200).send("OK");
       }
 
