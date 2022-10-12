@@ -40,7 +40,7 @@ const Contact = () => {
         console.log(response);
         axios
           .post(
-            "https://gdjuptorp8.execute-api.us-east-2.amazonaws.com/default/portfolioContactFormSubmit",
+            "https://yh6c8nidxa.execute-api.us-east-2.amazonaws.com/default/submitform",
             formValues
           )
           .then((res) => console.log(res));
